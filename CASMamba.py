@@ -174,7 +174,7 @@ class Permute(nn.Module):
 #  Paper Specific Modules: CPM & PFAG
 # ===========================================================================
 
-# Renamed ESTD -> CPM (Coordinate Perception Module)
+
 class CPM(nn.Module):
     def __init__(self, in_channels, reduction_ratio=16):
         super(CPM, self).__init__()
@@ -194,7 +194,7 @@ class CPM(nn.Module):
         return out
 
 
-# Renamed CARG -> PFAG (Parameter-Free Attention Gate)
+
 class PFAG(nn.Module):
     def __init__(self, in_channels, kernel_size=3):
         super(PFAG, self).__init__()
@@ -253,7 +253,7 @@ class BiAttn(nn.Module):
         return out
 
 
-# Renamed MultiScanVSSM -> ContentAwareScan
+
 class ContentAwareScan(MultiScan):
     ALL_CHOICES = MultiScan.ALL_CHOICES
 
@@ -518,7 +518,7 @@ class SS2D(nn.Module):
 #  CAS Block (Content-Aware Scan Block)
 # ===========================================================================
 
-# Renamed VSSBlock -> CASBlock
+
 class CASBlock(nn.Module):
     def __init__(
             self,
@@ -665,7 +665,6 @@ class Final_PatchExpand2D(nn.Module):
         return x
 
 
-# Renamed VSSM -> CASMamba
 class CASMamba(nn.Module):
     def __init__(
             self,
